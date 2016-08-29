@@ -1,0 +1,83 @@
+@font-face{
+	font-family: 'UTUSUMACINTA';
+	src:url(Orbitron-Regular.ttf);
+}
+
+body{
+	font-family: 'UTUSUMACINTA';
+}
+.fondo{
+	margin: 0px auto;
+	width: 90%;
+	height: 700px;
+	background:
+	url(fondo.jpg) no-repeat,url(bg.jpg);
+	background-size: 80%,50%;
+	background-position: center;
+	border-radius: 10px 10px 10px 10px;
+}
+.titulo{
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	text-shadow: 2px 2px 2px yellow;
+}
+.corsel{
+	float: left;
+	width: 200px;
+	height: 200px;
+	content: url(corsel.png);
+	margin-top: 400px;
+	margin-left: 200px;
+	transition: margin-top 2s ease;
+	-webkit-animation:corsel-animation 5s linear infinite;
+}
+.sol{
+	float: right;
+	width: 100px;
+	height: 100px;
+	content: url(sol.png);
+	margin:250px 150px 0px 0px;
+	-webkit-animation:sol-animation 5s ease-in-out infinite;
+}
+.nube{
+	width: 300px;
+	height: 100px;
+	content: url(nubes.png);
+	margin: 50px 100px;
+	opacity: 0.8;
+	position: fixed;
+	animation: nube-animation 5s ease-in-out;
+	-webkit-animation:nube-animation 5s ease-in-out infinite;
+}
+/* - Efectos*/
+@keyframes corsel-animation{
+	50%{
+		transform: rotate(-20deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+@keyframes sol-animation{
+	50%{
+		margin-top: 80px;
+	}
+	100%{	
+		content:url(luna.png);
+	}
+}
+
+@keyframes nube-animation{
+	50%{
+		margin: 50px 700px;
+	}
+	100%{
+		margin: 50px 100px;
+	}
+}
+
+
+
+
