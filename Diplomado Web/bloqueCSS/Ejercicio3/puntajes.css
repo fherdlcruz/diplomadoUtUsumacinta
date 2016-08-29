@@ -1,0 +1,55 @@
+@font-face{
+	font-family: 'UTUSUMACINTA';
+	src:url(Orbitron-Regular.ttf);
+}
+
+body{
+	font-family: 'UTUSUMACINTA';
+}
+
+.punto{
+	font-size: 18pt;
+}
+
+.pixeles{
+	font-size: 18px;
+}
+
+.ems{
+	font-size: 18em;
+}
+
+.rem{
+	font-size: 18rem;
+}
+
+.porcentaje{
+	font-size: 50%;
+}
+/*..................*/
+.p{
+	width: 50pt;
+	border:1px black solid;
+}
+.pi{
+	width: 50px;
+	border:1px black solid;
+}
+.r{
+	width: 50em;
+	border:1px black solid;
+}
+.e{
+	width: 50em;
+	border:1px black solid;
+}
+.po{
+	width: 50%;
+	border:1px black solid;
+}
+
+
+
+
+
+

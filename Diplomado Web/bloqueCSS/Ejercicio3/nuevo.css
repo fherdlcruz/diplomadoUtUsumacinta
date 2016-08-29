@@ -1,0 +1,27 @@
+.multiple-background{
+	width: 100%;
+	height: 400px;
+	background-image: 
+	url('bg1.jpg'),
+	url('bg2.jpg');
+	background-repeat: no-repeat;
+}
+.propiedad-contain{
+	background-size: contain;
+	border: 2px red solid;
+}
+.propiedad-radius{
+	border-radius: 10px 10px 10px 10px;
+	border: 2px green solid;
+}
+.propiedad-shadow{
+	box-shadow: 5px 5px 5px 5px #000;
+}
+
+.propiedad-gradients{
+	background: 
+		linear-gradient(#000,#FFF);
+}
+.propiedad-rgba{
+	background-color: rgba(0,0,0,0.2);
+}

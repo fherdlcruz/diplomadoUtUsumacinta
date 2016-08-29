@@ -1,0 +1,8 @@
+@font-face{
+	font-family: 'UTUSUMACINTA';
+	src:url(Orbitron-Regular.ttf);
+}
+
+body{
+	font-family: 'UTUSUMACINTA';
+}

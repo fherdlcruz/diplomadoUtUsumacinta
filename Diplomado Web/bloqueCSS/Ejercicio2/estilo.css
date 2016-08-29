@@ -1,0 +1,23 @@
+.aviso{
+	width: 40%;
+	border: 1px black solid;
+}
+
+.aviso .especial{
+	font-style: italic;
+}
+.aviso .otrospecial{
+	font-size: 40px;
+}
+div.aviso span.especial{
+	color: pink;
+}
+
+ul#menu li.destacado a#inicio{
+	color: green
+}
+
+.aviso{
+	width: 90%;
+	border: 4px black solid;
+}

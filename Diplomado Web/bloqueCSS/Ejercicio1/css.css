@@ -1,0 +1,26 @@
+
+/*Selector global*/
+*{color: green}
+/*Selector de etiquetas*/
+h1{
+	color: red;
+}
+p{
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 20px;
+	color: blue;
+}
+/*Selector de clases*/
+.miEstilo{
+	color: pink;
+	font-size: 60px;
+}
+
+
+/*Selector con id*/
+#miEstiloID{
+	color: orange;
+	font-size: 100px;
+}
