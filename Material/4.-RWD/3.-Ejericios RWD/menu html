@@ -1,0 +1,22 @@
+		<div class="menu">
+			<ul class="lista" id="menu">
+  				<li><a  href="#">Portafolio</a></li>
+  				<li><a href="#">Objetivos</a></li>
+  				<li><a href="#">Contáctame</a></li>
+  				<li class="icon">
+  					<a href="javascript:void(0);" style="font-size:15px;" onclick="muestraMenu()">&#9776;</a>
+  				</li>
+			</ul>
+		</div>
+		
+		
+			<script>
+		function muestraMenu() {
+	    	var x = document.getElementById("menu");
+	    	if (x.className === "lista") {
+	        	x.className += " responsive";
+	    	} else {
+	        	x.className = "lista";
+	    	}
+		}
+	</script>
