@@ -1,0 +1,87 @@
+body{
+	margin: 0px auto;
+}
+.contenido{
+	margin: 0px auto;
+	width: 99%;
+	height: auto;
+	display: block;
+	border: 1px black solid;
+}
+.header{
+	width: 99%;
+	height: 200px;
+	border: 1px red solid;
+}
+.container{
+	width: 99%;
+	height: 400px;
+	border: 1px red solid;
+}
+.footer{
+	width: 99%;
+	height: 200px;
+	border: 1px red solid;
+}
+
+.logo{
+	float: left;
+	width: 10%;
+	height: 200px;
+	border: 1px green solid;
+	font-size: 50px;
+}
+.menu{
+	float: right;
+	width: 89	%;
+	height: 200px;
+	border: 1px green solid;
+}
+
+.panel-derecho{
+	float: left;
+	width: 30%;
+	height: 400px;
+	border: 1px green solid;
+}
+.panel-izquierdo{
+	float: right;
+	width: 69%;
+	height: 400px;
+	border: 1px green solid;
+}
+
+.informacion{
+	float: left;
+	width: 30%;
+	height: 200px;
+	border: 1px green solid;
+}
+.autor{
+	float: right;
+	width: 69%;
+	height: 200px;
+	border: 1px green solid;
+}
+/*MEDIA -> RWD*/
+
+/*Móviles en horizontal o tablets en vertical*/
+@media (max-width: 768px){
+	.logo{
+		width: 100%;
+	}
+	.menu{
+		width: 100%
+	}
+	.logo p{
+		font-size: 25px;
+		text-align: center;
+	}
+	.logo img{
+		width:50%;
+		text-align:center
+	}
+}
+
+
+
