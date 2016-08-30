@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Muestra RWD</title>
-	<link rel="stylesheet" type="text/css" href="muestra.css">
-</head>
-<body>
-<div class="contenido">
-	<div class="header">
-		<div class="logo">
-			<div class="avatar"></div>
-			<div class="nombre">Fernando Hernández</div>
-		</div>
 		<div class="menu">
 			<ul class="lista" id="menu">
   				<li><a  href="#">Portafolio</a></li>
@@ -22,16 +8,9 @@
   				</li>
 			</ul>
 		</div>
-	</div>
-	<div class="container">
-		<div class="panel-derecho"></div>
-		<div class="panel-izquierdo"></div>
-	</div>
-	<div class="footer">
-		<div class="informacion"></div>
-		<div class="autor"></div>
-	</div>
-	<script>
+		
+		
+			<script>
 		function muestraMenu() {
 	    	var x = document.getElementById("menu");
 	    	if (x.className === "lista") {
@@ -41,6 +20,3 @@
 	    	}
 		}
 	</script>
-</div>
-</body>
-</html>
