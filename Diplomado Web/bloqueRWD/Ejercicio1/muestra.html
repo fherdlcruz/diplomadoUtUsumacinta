@@ -9,10 +9,19 @@
 <div class="contenido">
 	<div class="header">
 		<div class="logo">
-			<p>Logo</p>
-			<img src="logoUTU.png">
+			<div class="avatar"></div>
+			<div class="nombre">Fernando Hernández</div>
 		</div>
-		<div class="menu"></div>
+		<div class="menu">
+			<ul class="lista" id="menu">
+  				<li><a  href="#">Portafolio</a></li>
+  				<li><a href="#">Objetivos</a></li>
+  				<li><a href="#">Contáctame</a></li>
+  				<li class="icon">
+  					<a href="javascript:void(0);" style="font-size:15px;" onclick="muestraMenu()">&#9776;</a>
+  				</li>
+			</ul>
+		</div>
 	</div>
 	<div class="container">
 		<div class="panel-derecho"></div>
@@ -22,6 +31,16 @@
 		<div class="informacion"></div>
 		<div class="autor"></div>
 	</div>
+	<script>
+		function muestraMenu() {
+	    	var x = document.getElementById("menu");
+	    	if (x.className === "lista") {
+	        	x.className += " responsive";
+	    	} else {
+	        	x.className = "lista";
+	    	}
+		}
+	</script>
 </div>
 </body>
 </html>
