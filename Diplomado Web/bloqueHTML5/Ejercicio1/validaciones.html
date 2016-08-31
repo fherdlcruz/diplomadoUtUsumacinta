@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+		Para el problema de compatibilidad, utilizamos:
+		los prefijos de compatibilidad de navegadores, proporcionados por CSS3, ejemplo;
+		-webkit-attributocss	->Chrome, Safari
+		-o-atributocss			->Opera
+		-moz-atributocss		->Firefox
+		-ms-atributocss			->IExplore
+	-->
+	<meta charset="utf-8">
+	<title>Validaciones HTML5</title>
+</head>
+<body>
+	<form action="#">
+	<table>
+		<thead></thead>
+		<tbody>
+			<tr>
+				<td>E-mail:</td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td>Nombre de usuario</td>
+				<td><input type="text" name="usuario"></td>
+			</tr>
+			<tr>
+				<td>Elije un número entre 1 y 5</td>
+				<td><input type="number" name="numeros" min="0" max="10"></td>
+			</tr>
+			<tr>
+				<td>Agrega tu página web</td>
+				<td><input type="url" name="mipagina" placeholder="https://"></td>
+			</tr>
+			<tr>
+				<td>Elije un color</td>
+				<td><input type="color" name="colores"></td>
+			</tr>
+			<tr>
+				<td>Elige un rango</td>
+				<td><input type="range" name="rango" min="100" max="300" step="10"></td>
+			</tr>
+			<tr>
+				<td>Nivel progreso</td>
+				<td>
+					<progress value="23" max="100"></progress>
+				</td>
+			</tr>
+			<tr>
+				<td>Fecha de nacimiento</td>
+				<td><input type="date" name="fechaNacimiento"></td>
+			</tr>
+			<tr>
+				<td>Lista de datos</td>
+				<td>
+				<input list="browsers" name="x">
+				<datalist id="browsers">
+				  <option value="Internet Explorer">
+				  <option value="Firefox">
+				  <option value="Chrome">
+				  <option value="Opera">
+				  <option value="Safari">
+				</datalist>
+				</td>
+			</tr>
+
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="2" align="center">
+				<input type="submit" name="enviar" value="Enviar">
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	</form>
+	<br><br>
+	<form oninput="resultado.value=parseInt(rangos.value) + parseInt(numeros.value)">0
+		<input type="range" id="rangos" value="1">100 + 
+		<input type="number"  id="numeros" value="1">=
+		<output name="resultado" for("rangos numeros")></output>
+	</form>
+
+</body>
+</html>
