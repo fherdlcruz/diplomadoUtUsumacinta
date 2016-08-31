@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	    <script>
-		//Encontramos al elemento canvas
-		var c=document.getElementById("myCanvas");
-		//Llamamos al entorno getContext()  y le pasamos el parametro "2d"
-		//Y nos devolvera un objeto HTML5 con muchas propiedades para
-		//drawing paths, boxes, circles, text, images, and more.
-		var ctx=c.getContext("2d");
-		//Las siguientes lineas dibujan un rectangulo
-		ctx.fillStyle="#FF0000";
-		ctx.fillRect(0,0,150,75);
-		
-		//## LINEA
-		var c=document.getElementById("myCanvas2");
-		var ctx=c.getContext("2d");
-		ctx.moveTo(0,0);
-		ctx.lineTo(300,150);
-		ctx.stroke();
-	</script> 	
+	<title>HTML5 Canvas</title>
+
 </head>
 <body>
-	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas> 
-   
-    <canvas id="myCanvas2" width="200" heaight="200" style="border:1px solid #000000;"></canvas>
+	<h3>Rectángulo</h3>
+	<canvas id="rectangulo" width="200" height="100" style="border:1px #555 solid"></canvas>
+	<script>
+		var canvas=document.getElementById("rectangulo");
+		var contexto=canvas.getContext("2d");
+		contexto.fillStyle="#FF0000";
+		contexto.fillRect(0,0,150,75); 
+		//fillRect(eje x, eje y, ancho, alto)
+	</script>
+	<br>
+	<h3>Gráficos</h3>
+	<canvas id="graficos" width="200" height="200"></canvas>
+	<script>
+		var cgraficos=document.getElementById("graficos");
+		var ctxgraficos=cgraficos.getContext("2d");
+		ctxgraficos.fillStyle="rgb(0,255,0)";
+		ctxgraficos.fillRect(25,25,100,100);
+
+		ctxgraficos.fillStyle="rgba(255,0,0,0.6)";
+		ctxgraficos.beginPath(); // Prepara el segmento donde se creará otro objeto dentro del canvas
+		ctxgraficos.arc(125,100,0,05,Math.PI*2,true);
+		//arc(eje x, eje y, radio del circulo, ángulo,dirección conforme a las manesillas del reloj(true>, false<)
+		ctxgraficos.fill(); //Rellena el segmento declarado en .beginPath()
+
+		ctxgraficos.fillStyle="rgba(0,0,255,0.6)";
+		ctxgraficos.beginPath();
+		ctxgraficos.moveTo(125,100);//crea un puntero imaginario donde se comenzará a trazar la linea con lineTo(x,y)
+		ctxgraficos.lineTo(175,50);//Dibuja la línea recta
+		ctxgraficos.lineTo(255,150);
+		ctxgraficos.fill();
+
+	</script>
+	<br>
+	<h3>Degradado</h3>
+
 </body>
 </html>
