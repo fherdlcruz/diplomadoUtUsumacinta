@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.body{
+			width:100%;
+			height:10%;
+			overflow: hidden;
+			margin: 0px auto;
+		}
+		.mole{
+			background-color:rgb(128,64,0);
+			border-radius: 100px 100px 0px 0px;
+			height: 100%;
+			width: 10%;
+			position: absolute;
+			top: 100%;
+			background-image: url(mole.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			cursor: crosshair;
+		}
+		.left_ear{
+			background-color: rgb(128,64,0);
+			border-radius: 100px;
+			position: absolute;
+			float: left;
+			min-width: 30%;
+			padding-top: 30%;
+			z-index: -1;
+		}
+		.right_ear{
+			background-color: rgb(128,64,0);
+			border-radius: 100px;
+			position: absolute;
+			float: left;
+			min-width: 30%;
+			padding-top: 30%;
+			left: 70%;
+			z-index: -1;
+		}
+
+		#mole1{left: 10%;}
+		#mole2{left: 45%;}
+		#mole3{left: 90%;}
+
+		.score{
+			font-family: Arial;
+			font-size: 30px;
+			position: absolute;
+			right: 5%;
+			z-index:1;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-3.0.0.min.js" ></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var score=0;
+
+		function fin(){
+			console.log('GAME OVER')
+			$('.mole').animate({'top':'100%'},300);	
+			$('.score').html('FIN DEL JUEGO<br/><div class="intentar" style="cursor:pointer;background-color:#444;color:#ffffff;">Intentar nuevamente</div>');
+			$('.intentar').click(function(){iniciar();});
+		}
+
+		function iniciar(){
+			score=0;
+			$('.score').html('SCORE : '+score);
+			$('.mole').animate({'top':'0%'},5000,function(){
+				fin();
+			});
+
+			$('.mole').hover(function(){
+				$(this).css('background-image','url(ohoh.png)');
+				$(this).stop().animate({'top':'100%'},300, function(){
+					score=score+(1);
+					$('.score').html('SCORE : '+score);
+					$(this).css('background-image','url(mole.png)');
+					$(this).animate({'top':'0%'},5000);
+				});
+			});
+		}
+		
+
+		iniciar();
+	})
+	</script>
+		
+</head>
+<body>
+	<div class="score">Score : 0</div>
+	<div class="mole" id="mole1">
+		<div class="left_ear"></div>
+		<div class="right_ear"></div>
+	</div>
+	<div class="mole" id="mole2">
+		<div class="left_ear"></div>
+		<div class="right_ear"></div>
+	</div>
+	<div class="mole" id="mole3">
+		<div class="left_ear"></div>
+		<div class="right_ear"></div>
+	</div>
+</body>
+</html>
