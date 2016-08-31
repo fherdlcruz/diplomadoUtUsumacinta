@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>HTML5 Canvas</title>
-
 </head>
 <body>
 	<h3>Rectángulo</h3>
@@ -25,7 +25,7 @@
 
 		ctxgraficos.fillStyle="rgba(255,0,0,0.6)";
 		ctxgraficos.beginPath(); // Prepara el segmento donde se creará otro objeto dentro del canvas
-		ctxgraficos.arc(125,100,0,05,Math.PI*2,true);
+		ctxgraficos.arc(125,100,50,0,Math.PI*2,true);
 		//arc(eje x, eje y, radio del circulo, ángulo,dirección conforme a las manesillas del reloj(true>, false<)
 		ctxgraficos.fill(); //Rellena el segmento declarado en .beginPath()
 
@@ -39,6 +39,43 @@
 	</script>
 	<br>
 	<h3>Degradado</h3>
+	<canvas id="degradado" width="200" height="100" style="border:1px #555 solid"></canvas>
+	<script>
+		var cdegradado=document.getElementById("degradado");
+		var ctxdegradado= cdegradado.getContext("2d");
+		// Crear el Gradient
+		var gradient=ctxdegradado.createLinearGradient(0,0,200,0);
+		gradient.addColorStop(0,'red');
+		gradient.addColorStop(0.3,'blue');
+		gradient.addColorStop(0.9,'green');
+		gradient.addColorStop(1,'white');
+		// Asignar el degradado como estilo de relleno
+		ctxdegradado.fillStyle=gradient;
+		ctxdegradado.fillRect(10,10,150,80);
+	</script>
+	<br>
+	<h3>Fuentes</h3>
+	<canvas id="fuente" width="300" height="100" style="border:1px #555 solid">
+		Éste navegador no soporta canvas
+	</canvas>
+	<script>
+		var cfont=document.getElementById('fuente');
+		var ctxfont= cfont.getContext('2d');
+		ctxfont.font="30px Arial";
+		ctxfont.fillText("UT del Usumacinta",10,50);
+		//fillText("texto",eje x, eje y)
+	</script>
+	<br>
+	<h3>Circulos</h3>
+	<canvas id="circulos" width="300" height="300" style="border:1px #555 solid"></canvas>
+	<script>
+		var ccirculos=document.getElementById('circulos');
+		var ctxcirculos=ccirculos.getContext('2d');
+		ctxcirculos.beginPath();
+		ctxcirculos.arc(95,50,40,0,2*Math.PI);
+		//arc(eje x, eje y, radio, ángulo inicio, ángulo final)
+		ctxcirculos.stroke(); //Dibuja la línea del circulo
+	</script>
 
 </body>
 </html>
